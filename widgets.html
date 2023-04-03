@@ -2,7 +2,7 @@
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Common Sections of Specifications</title>
+  <title>Example of a Widget Specification</title>
   <meta content="w3c/UD" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
@@ -414,7 +414,7 @@ dfn > a.self-link::before      { content: "#"; }
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
-   <h1 class="p-name no-ref" id="title">Common Sections of Specifications</h1>
+   <h1 class="p-name no-ref" id="title">Example of a Widget Specification</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">Unofficial Proposal Draft</a>, <time class="dt-updated" datetime="2023-04-01">1 April 2023</time></p>
    <details open>
     <summary>More details about this document</summary>
@@ -435,7 +435,7 @@ dfn > a.self-link::before      { content: "#"; }
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>The Abstract section provides a summary of the standard, including its purpose, scope, and key features. It’s usually a short, standalone section that appears at the beginning of the document, before the Introduction.</p>
+   <p>This documents a fictitious Widget Specification.</p>
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="sotd"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
@@ -446,8 +446,13 @@ dfn > a.self-link::before      { content: "#"; }
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
     <li><a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
-    <li><a href="#api_1"><span class="secno">2</span> <span class="content">API Sections</span></a>
-    <li><a href="#definitions"><span class="secno">3</span> <span class="content">Definitions</span></a>
+    <li>
+     <a href="#api_1"><span class="secno">2</span> <span class="content">API Sections</span></a>
+     <ol class="toc">
+      <li><a href="#definitions"><span class="secno">2.1</span> <span class="content">Definitions {#definitions}</span></a>
+      <li><a href="#security-considerations"><span class="secno">2.2</span> <span class="content">Security Considerations {#security-considerations}</span></a>
+      <li><a href="#privacy-considerations-privacy-considerations"><span class="secno">2.3</span> <span class="content">Privacy Considerations (#privacy-considerations)</span></a>
+     </ol>
     <li>
      <a href="#w3c-conformance"><span class="secno"></span> <span class="content">Conformance</span></a>
      <ol class="toc">
@@ -463,27 +468,84 @@ dfn > a.self-link::before      { content: "#"; }
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
-   <p>The Introduction section provides an overview of the technology being specified.
-It should be written in a clear and concise way that is easy for the target audience to understand. It should also be consistent with the tone and style of the rest of the web standard.</p>
-   <p>It could include the following information:</p>
+   <p>This document describes the Web Standard for Widgets, which is a set of guidelines for creating and using widgets. Widgets are small, self-contained applications that can be embedded in a web page. They are typically used to provide additional functionality to a web page, such as a calendar, a weather forecast, or a news ticker.</p>
+   <p>The Web Standard for Widgets is based on the following principles:</p>
    <ul>
     <li data-md>
-     <p>Who is the target audience for the web standard.</p>
+     <p>Openness: The Web Standard for Widgets is open and free to use. Anyone can create or use widgets that conform to the standard.</p>
     <li data-md>
-     <p>A brief overview of the web standard and its purpose.</p>
+     <p>Extensibility: The Web Standard for Widgets is extensible. This means that new widgets can be added to the standard without affecting existing widgets.</p>
     <li data-md>
-     <p>A description of the scope of the web standard.</p>
+     <p>Compatibility: The Web Standard for Widgets is designed to be compatible with existing web technologies. This means that widgets can be used in web pages that are created using standard web technologies.</p>
    </ul>
-   <p>The scope of a web standard is the range of topics that it covers. It is important to define the scope of a web standard clearly so that users know what to expect and what is not included.</p>
-   <p>The scope of a web standard can be defined in terms of the following:</p>
-   <p>The technologies that are covered by the standard.
-The features that are included in the standard.
-The level of detail that is provided in the standard.
-The target audience for the standard.</p>
+   <p>The Web Standard for Widgets is a work in progress. We welcome feedback and suggestions for improvement. Please contact us at [email protected] if you have any questions or comments.</p>
    <h2 class="heading settled" data-level="2" id="api_1"><span class="secno">2. </span><span class="content">API Sections</span><a class="self-link" href="#api_1"></a></h2>
-   <p>These sections specify the programming interface for implementing the standard.</p>
-   <h2 class="heading settled" data-level="3" id="definitions"><span class="secno">3. </span><span class="content">Definitions</span><a class="self-link" href="#definitions"></a></h2>
-   <p>This section defines key terms and concepts used in the standard.</p>
+   <p>The Web Standard for Widgets defines the following API:</p>
+   <ul>
+    <li data-md>
+     <p>The `Widget` interface: This interface represents a widget.</p>
+    <li data-md>
+     <p>The `WidgetManager` interface: This interface represents a widget manager.</p>
+    <li data-md>
+     <p>The `WidgetRegistry` interface: This interface represents a widget registry.</p>
+   </ul>
+   <p>The `Widget` interface defines the following methods:</p>
+   <ul>
+    <li data-md>
+     <p>`init`: This method is called when the widget is first created.</p>
+    <li data-md>
+     <p>`update`: This method is called to update the widget.</p>
+    <li data-md>
+     <p>`destroy`: This method is called when the widget is destroyed.</p>
+   </ul>
+   <p>The `WidgetManager` interface defines the following methods:</p>
+   <ul>
+    <li data-md>
+     <p>`createWidget`: This method is called to create a new widget.</p>
+    <li data-md>
+     <p>`getWidget`: This method is called to get a widget by its ID.</p>
+    <li data-md>
+     <p>`destroyWidget`: This method is called to destroy a widget.</p>
+   </ul>
+   <p>The `WidgetRegistry` interface defines the following methods:</p>
+   <ul>
+    <li data-md>
+     <p>`registerWidget`: This method is called to register a widget with the registry.</p>
+    <li data-md>
+     <p>`getWidgetById`: This method is called to get a widget by its ID from the registry.</p>
+    <li data-md>
+     <p>`unregisterWidget`: This method is called to unregister a widget from the registry.</p>
+   </ul>
+   <h3 class="heading settled" data-level="2.1" id="definitions"><span class="secno">2.1. </span><span class="content">Definitions {#definitions}</span><a class="self-link" href="#definitions"></a></h3>
+   <p>The following definitions are used in this document:</p>
+   <ul>
+    <li data-md>
+     <p>Widget: A small, self-contained application that can be embedded in a web page.</p>
+    <li data-md>
+     <p>Widget manager: An object that manages widgets.</p>
+    <li data-md>
+     <p>Widget registry: A database of widgets.</p>
+   </ul>
+   <h3 class="heading settled" data-level="2.2" id="security-considerations"><span class="secno">2.2. </span><span class="content">Security Considerations {#security-considerations}</span><a class="self-link" href="#security-considerations"></a></h3>
+   <p>The following security considerations should be taken into account when using the Web Standard for Widgets:</p>
+   <ul>
+    <li data-md>
+     <p>Widgets should be sandboxed to prevent them from accessing or modifying data outside of their own scope.</p>
+    <li data-md>
+     <p>Widgets should be signed to verify their authenticity.</p>
+    <li data-md>
+     <p>Widgets should be updated regularly to patch security vulnerabilities.</p>
+   </ul>
+   <h3 class="heading settled" data-level="2.3" id="privacy-considerations-privacy-considerations"><span class="secno">2.3. </span><span class="content">Privacy Considerations (#privacy-considerations)</span><a class="self-link" href="#privacy-considerations-privacy-considerations"></a></h3>
+   <p>The following privacy considerations should be taken into account when using the Web Standard for Widgets:</p>
+   <ul>
+    <li data-md>
+     <p>Widgets should not collect or store personal data without the user’s consent.</p>
+    <li data-md>
+     <p>Widgets should only access data that is necessary for their operation.</p>
+    <li data-md>
+     <p>Widgets should provide users with a way to opt out of data collection.</p>
+   </ul>
   </main>
   <div data-fill-with="conformance">
    <h2 class="no-ref no-num heading settled" id="w3c-conformance"><span class="content">Conformance</span><a class="self-link" href="#w3c-conformance"></a></h2>
