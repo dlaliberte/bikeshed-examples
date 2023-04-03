@@ -13,7 +13,7 @@ jobs:
     - uses: w3c/spec-prod@v2
       with:
         TOOLCHAIN: bikeshed
-        SOURCE: template.bs
-        DESTINATION: template.html
+        SOURCE: widgets.bs
+        DESTINATION: widgets.html
         GH_PAGES_BRANCH: gh-pages
         BUILD_FAIL_ON: warning
